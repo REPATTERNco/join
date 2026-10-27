@@ -505,8 +505,8 @@ const CONFIG = {
   links: {
     startHere: "https://app.arketa.co/repattern/on-demand/ScsHP5I2ks8OhBl2csuB",
     web:       "https://app.arketa.co/repattern/on-demand",
-    iphone:    "",                     // App Store listing for the branded app
-    android:   "",                     // Arketa dashboard: Sales Channels > Mobile App > Android app download
+    iphone:    "https://apps.apple.com/us/app/repattern-co/id6778624062",   // App Store listing for the branded app
+    android:   "https://api.arketa.com/apk/repattern",   // Android app download
     community: "https://login.repatternco.com/communities/groups/repattern/home"   // REVIVAL community on Course Creator
   },
   welcomeVideo: {                      // Dr. Lily's video on the thank-you page
@@ -652,7 +652,7 @@ const CONFIG = {
     if (url) return '<a class="lbtn" href="' + url + '">' + icons[icon] + '<span>' + label + '</span>' + arrow + '</a>';
     return CONFIG.preview ? '<div class="lbtn missing">' + icons[icon] + '<span>' + label + '</span><span class="miss">Link needed</span></div>' : '';
   }
-  $("#app-links").innerHTML = linkBtn("iPhone app", CONFIG.links.iphone, "phone") + linkBtn("Android app", CONFIG.links.android, "phone") + linkBtn("Open in your browser", CONFIG.links.web, "web");
+  $("#app-links").innerHTML = linkBtn("Open in your browser", CONFIG.links.web, "web") + linkBtn("Access our app (Apple)", CONFIG.links.iphone, "phone") + linkBtn("Access our app (Android)", CONFIG.links.android, "phone");
   $("#com-links").innerHTML = CONFIG.links.community ? linkBtn("Open the community", CONFIG.links.community, "people") : "";
 
   // Wall-clock time in a time zone to the exact moment (handles daylight saving).
