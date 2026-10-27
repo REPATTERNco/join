@@ -724,6 +724,7 @@ const CONFIG = {
   function setupVideo(){
     if (videoReady) return;
     videoReady = true;
+    if (!vId) return;                    // no video yet: keep the video area hidden (no placeholder)
     const first = $("#first"), frame = $("#w-video-frame");
     $("#w-video").hidden = false;
     first.classList.add("has-video");
